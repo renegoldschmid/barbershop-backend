@@ -1,7 +1,7 @@
 {
   "db": "mongodb+srv://root:root@barbershopcluster.0ahhl.mongodb.net/barbershop-db-test?retryWrites=true&w=majority",
   "server": {
-    "url": "https://barbershop-api-server.herokuapp.com",
+    "url": "127.0.0.1",
     "port": 8081,
   },
   "mail": {
