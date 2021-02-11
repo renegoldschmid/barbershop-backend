@@ -1,0 +1,12 @@
+{
+  "db": "mongodb+srv://root:root@barbershopcluster.0ahhl.mongodb.net/barbershop-db?retryWrites=true&w=majority",
+  "server": {
+    "url": "127.0.0.1",
+    "port": 8081,
+  },
+  "mail": {
+    "service": "gmail",
+    "address": "<EMAIL_ADDRESS>",
+    "password": "<EMAIL_<PASSWORD>",
+  },
+}

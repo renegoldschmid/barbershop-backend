@@ -1,5 +1,5 @@
 {
-  "name": "data-analysis",
+  "name": "barbershop-backend",
   "version": "1.0.0",
   "description": "Data Analysis",
   "main": "index.js",
@@ -9,15 +9,11 @@
     "test": "rm -r -f ./build && npm run tsc && mocha --recursive build/test/ --exit",
     "test_without_clean": "mocha --recursive build/test/ --exit",
     "tsc": "tsc",
-    "build": "rm -r -f ./build && npm run tsc",
-    "start_car_micro_service": "node ./build/micro_services/car-service/src/server.js",
-    "start_location_micro_service": "node ./build/micro_services/location-service/src/server.js",
-    "start_all": "npm run clear && ( npm run start_car_micro_service & npm run start_location_micro_service & node ./build/src/server.js )",
-    "start_all_micro_services": "npm run start_car_micro_service & npm run start_location_micro_service"
+    "build": "rm -r -f ./build && npm run tsc"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PrinzAlexander/Data-Analysis.git"
+    "url": "git+https://github.com/renegoldschmid/barbershop-backend.git"
   },
   "author": "",
   "license": "ISC",
