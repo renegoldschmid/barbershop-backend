@@ -32,7 +32,6 @@
     "@types/md5": "^2.2.0",
     "@types/mocha": "^7.0.2",
     "@types/mongoose": "^5.10.3",
-    "@types/node": "^13.9.3",
     "@types/nodemailer": "^6.4.0",
     "@types/sendmail": "^1.4.2",
     "@types/soap": "^0.21.0",
@@ -59,5 +58,8 @@
     "sqlite3": "^4.1.1",
     "typescript": "^3.8.3",
     "validator": "^13.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^13.13.41"
   }
 }

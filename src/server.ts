@@ -6,7 +6,7 @@ import config from "../config/config.json"
 import path from "path"
 
 // Create a new express application instance
-const port = config.server.port
+const port = process.env.PORT
 const server: express.Application = express();
 
 db.setup(config.db).then(()=>{
