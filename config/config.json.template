@@ -1,0 +1,12 @@
+{
+  "db": "mongodb://localhost/test_database",
+  "server": {
+    "url": "127.0.0.1",
+    "port": 8081,
+  },
+  "mail": {
+    "service": "gmail",
+    "address": "<EMAIL_ADDRESS>",
+    "password": "<EMAIL_PASSWORD>",
+  },
+}

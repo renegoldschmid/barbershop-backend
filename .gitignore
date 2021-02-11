@@ -1,0 +1,7 @@
+node_modules
+npm-debug.log
+.DS_Store
+build
+config/config.json
+package-lock.json
+*.sqlite

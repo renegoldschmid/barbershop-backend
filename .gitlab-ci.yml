@@ -1,0 +1,52 @@
+image: node:latest
+
+services:
+  - mongo
+
+stages:
+  - build
+  - test
+  - deploy
+
+cache:
+  paths:
+  - node_modules/
+  - config
+  - html
+  - build
+
+install_dependencies:
+  stage: build
+  script:
+    - npm install
+    - cp ./config/config.test.json ./config/config.json
+    - ./setup_config.sh
+    - npm run build
+  artifacts:
+    paths:
+      - node_modules/
+      - config
+      - build
+
+testing_testing:
+  stage: test
+  script:
+    - cp ./config/config.test.json ./config/config.json
+    - npm run clear
+    - npm run test_without_clean
+
+deploy_prod:
+  image: docker:latest
+  services:
+    - docker:dind
+  stage: deploy
+#  before_script:
+#    - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
+  script:
+    - cp ./config/config.json.template ./config/config.json
+    - sed -i -e "s/<EMAIL_ADDRESS>/$EMAIL_ADDRESS/g" ./config/config.json
+    - sed -i -e "s/<EMAIL_PASSWORD>/$EMAIL_PASSWORD/g" ./config/config.json
+    - sed -i -e "s/<IP_ADDRESS>/$URL/g" ./config/config.json
+    - sed -i -e "s/<PORT>/$PORT/g" ./config/config.json
+  only:
+  - master
